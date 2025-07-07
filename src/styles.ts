@@ -5,14 +5,18 @@ const EstiloGlobal = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    list-style: none;
+
 }
 
   body{
   padding-top: 80px;
+  padding-bottom: 80px;
 
 
   @media(max-width:768px){
   padding-top:16px
+
   }
   }
 
@@ -27,10 +31,6 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 128px auto;
   column-gap: 56px;
-
-  img {
-    max-width: 100%;
-  }
 
   @media (max-width: 768px) {
     max-width: 80%;
