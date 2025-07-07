@@ -3,7 +3,11 @@ import Paragraph from '../../components/Paragraph'
 import Title from '../../components/Title'
 import { Descricao, ThemeButton, SidebarContainer } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  trocaTema: () => void
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar />
@@ -14,7 +18,7 @@ const Sidebar = () => (
       <Descricao tipo="principal" fontSize={12}>
         Desenvolvedor Full Stack Java
       </Descricao>
-      <ThemeButton>Mude o Tema</ThemeButton>
+      <ThemeButton onClick={props.trocaTema}>Mude o Tema</ThemeButton>
     </SidebarContainer>
   </aside>
 )
